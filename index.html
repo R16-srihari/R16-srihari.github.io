@@ -1,7 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ site.title | default: your-username }} – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>{{ site.title | default: your-username }}</h1>
+    <p>{{ site.description | default: "Personal projects & demos" }}</p>
+  </header>
+
+  <main>
+    <h2>My other pages</h2>
+    <ul id="repo-list">Loading…</ul>
+  </main>
+
+  <footer>
+    <small>
+      <a href="https://github.com/{{ site.github_username | default: 'your-username' }}">
+        View source on GitHub
+      </a>
+    </small>
+  </footer>
+
+  <script src="repos.js"></script>
 </body>
-</html> 
+</html>

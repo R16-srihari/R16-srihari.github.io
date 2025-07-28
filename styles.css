@@ -1,0 +1,22 @@
+:root {
+  --bg: #fafafa;
+  --fg: #111;
+  --accent: #0969da;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+header, main, footer {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h1 { color: var(--accent); }
+ul { list-style: none; padding: 0; }
+li { margin: .5rem 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
