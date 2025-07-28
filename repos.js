@@ -1,5 +1,5 @@
 /* Automatically list every public repo that has a gh-pages branch */
-const GH_USER = 'your-username';          // <-- change to your GitHub username
+const GH_USER = 'R16-srihari';          // <-- change to your GitHub username
 const LIST   = document.getElementById('repo-list');
 
 fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100`)
