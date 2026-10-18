@@ -14,13 +14,6 @@ const quartoProjects = [
     language: 'Quarto',
     type: 'quarto'
   },
-  {
-    name: 'Example Quarto Project (replace me)',
-    url: 'https://r16srihari.quarto.pub/example-project/',
-    description: 'Placeholder Quarto page entry. Replace with your real Quarto page URL.',
-    language: 'Quarto',
-    type: 'quarto'
-  }
 ];
 
 function normalizeGithubProject(repo) {
