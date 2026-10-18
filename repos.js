@@ -58,7 +58,10 @@ function renderProjects(projects) {
     .join('');
 }
 
-fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100`)
+const requestController = new AbortController();
+const requestTimeoutId = setTimeout(() => requestController.abort(), 10000);
+
+fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100`, { signal: requestController.signal })
   .then(response => {
     if (!response.ok) {
       throw new Error('GitHub API request failed');
@@ -74,4 +77,7 @@ fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100`)
   })
   .catch(() => {
     renderProjects(quartoProjects);
+  })
+  .finally(() => {
+    clearTimeout(requestTimeoutId);
   });
